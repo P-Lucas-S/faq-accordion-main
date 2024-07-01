@@ -22,10 +22,11 @@ body {
 }
 
 section {
-    width: 500px;
+    width: 600px;
     background-color: white;
     border-radius: 15px;
-    padding: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 0 50px #33333371;
 }
 
 section>* {
@@ -53,21 +54,28 @@ h1 {
     padding: 0px 15px;
 }
 
-
 details {
     padding: 10px;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+details[open] {
+    margin-bottom: 0;
 }
 
 summary {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 summary:hover {
     color: #AD28EB;
+
 }
 
 summary::-webkit-details-marker {
@@ -77,15 +85,16 @@ summary::-webkit-details-marker {
 summary::after {
     content: '+';
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
     background-color: #AD28EB;
     color: white;
     border-radius: 50%;
     font-size: 14px;
     margin-left: 10px;
+    transition: background-color 0.5s ease;
 }
 
 details[open] summary::after {
@@ -94,9 +103,9 @@ details[open] summary::after {
 }
 
 p {
-    font-size: 0.85em;
+    font-size: 1em;
     color: #888;
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
 
 hr {
