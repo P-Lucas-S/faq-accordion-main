@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,134 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Frontend Mentor | FAQ Accordion</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('../images/background-pattern-desktop.svg');
+      background-size: 100% auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-color: hsl(275, 100%, 97%);
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    section {
+      width: 400px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    section>* {
+      margin: 10px 0;
+    }
+
+    .title {
+      margin: 0px 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .star {
+      width: 2em;
+      height: 2em;
+      background-image: url('../images/icon-star.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px 15px;
+    }
+
+
+    details {
+      padding: 10px;
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 0.8em;
+      font-weight: 700;
+    }
+
+    summary:hover {
+      color: #AD28EB;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background-color: #AD28EB;
+      color: white;
+      border-radius: 50%;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    details[open] summary::after {
+      content: '-';
+      background-color: hsl(292, 42%, 14%);
+    }
+
+    p {
+      font-size: 0.69em;
+      color: #888;
+      padding: 10px 0px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-size: auto;
+      }
+
+      section {
+        max-width: 90vw;
+      }
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
     }
+
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
   </style>
 </head>
+
 <body>
   <section>
     <div class="title">
@@ -24,27 +144,32 @@
     </div>
     <details>
       <summary>What is Frontend Mentor, and how will it help me?</summary>
-      <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+      <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with
+        projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
     </details>
     <hr>
     <details>
       <summary>Is Frontend Mentor free?</summary>
-      <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.</p>
+      <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a
+        range of projects suitable for all skill levels.</p>
     </details>
     <hr>
     <details>
       <summary>Can I use Frontend Mentor projects in my portfolio?</summary>
-      <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!</p>
+      <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase
+        your skills to potential employers!</p>
     </details>
     <hr>
     <details>
       <summary>How can I get help if I'm stuck on a challenge?</summary>
-      <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.</p>
+      <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can
+        ask questions and seek support from other community members.</p>
     </details>
   </section>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="www.linkedin.com/in/pedro-lucas-b24190204">Pedro</a>.
   </div>
 </body>
+
 </html>
