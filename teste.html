@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Css/style.css">
+    <title>Detalhes Expansíveis</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Container */
+        .container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: 300px;
+            transition: all 0.4s ease;
+            /* Transição suave para altura e outras mudanças */
+        }
+
+        /* Details and Summary */
+        details {
+            margin-bottom: 10px;
+        }
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background-color: #00875F;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <details>
+            <summary>Mais Informações 1</summary>
+            <p>Este é o conteúdo adicional que é exibido quando o item é expandido.</p>
+        </details>
+
+        <details>
+            <summary>Mais Informações 2</summary>
+            <p>Outro conjunto de informações adicionais.</p>
+        </details>
+    </div>
+</body>
+
+</html>
